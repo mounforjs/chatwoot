@@ -30,15 +30,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: build base
         run: |
-          docker build -f ./docker/Dockerfile -t $DOCKER_USER/chatwoot-base:1.0
+          docker build -f ./docker/Dockerfile -t $DOCKER_USER/chatwoot-base:1.0 .
       
       - name: build rails
         run: |
-          docker build -f ./docker/dockerfiles/rails.Dockerfile -t $DOCKER_USER/chatwoot-rails:1.0
+          docker build -f ./docker/dockerfiles/rails.Dockerfile -t $DOCKER_USER/chatwoot-rails:1.0 .
 
       - name: build webpack
         run: |
-          docker build -f ./docker/dockerfiles/webpack.Dockerfile -t $DOCKER_USER/chatwoot-webpack:1.0
+          docker build -f ./docker/dockerfiles/webpack.Dockerfile -t $DOCKER_USER/chatwoot-webpack:1.0 .
 
 
       - name: docker push
