@@ -43,4 +43,6 @@ jobs:
 
       - name: docker push
         run: |
-          docker push $DOCKER_USER/gangala-frontend:1.0
+          docker push $DOCKER_USER/chatwoot-rails:1.0
+          docker push $DOCKER_USER/chatwoot-webpack:1.0
+          docker push $DOCKER_USER/chatwoot-base:1.0
