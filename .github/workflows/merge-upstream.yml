@@ -1,4 +1,4 @@
-name: Manual Merge Remote Action
+name: Merge Remote Action
 
 on: 
   workflow_dispatch:
@@ -7,8 +7,8 @@ on:
         description: 'Upstream repository chatwoot/chatwoot'
         required: true
         default: 'chatwoot/chatwoot'       
-      upstream:
-        description: 'Upstream branch to merge from. Eg. master'
+      upstream-branch:
+        description: 'Upstream branch to merge from.'
         required: true
         default: 'develop'           
       branch:
