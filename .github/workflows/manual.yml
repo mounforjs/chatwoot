@@ -27,11 +27,7 @@ jobs:
       - name: docker login
         run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-      # Runs a single command using the runners shell
-      - name: build base
-        run: |
-          docker build -f ./docker/Dockerfile -t $DOCKER_USER/chatwoot-base:1.0 .
-      
+
       - name: build rails
         run: |
           docker build -f ./docker/dockerfiles/rails.Dockerfile -t $DOCKER_USER/chatwoot-rails:1.0 .
@@ -40,6 +36,10 @@ jobs:
         run: |
           docker build -f ./docker/dockerfiles/webpack.Dockerfile -t $DOCKER_USER/chatwoot-webpack:1.0 .
 
+      # Runs a single command using the runners shell
+      - name: build base
+        run: |
+          docker build -f ./docker/Dockerfile -t $DOCKER_USER/chatwoot-base:1.0 .
 
       - name: docker push
         run: |
