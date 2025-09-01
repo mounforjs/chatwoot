@@ -100,3 +100,6 @@ Thanks goes to all these [wonderful people](https://www.chatwoot.com/docs/contri
 
 
 *Chatwoot* &copy; 2017-2021, Chatwoot Inc - Released under the MIT License.
+
+
+<!-- Security scan triggered at 2025-09-02 01:55:14 -->
